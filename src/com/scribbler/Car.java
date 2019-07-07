@@ -33,7 +33,19 @@ public class Car extends WheeledVehicle{
 	}
 
 	private void brake() {
-		System.out.println("Pressed brake.");
+		System.out.println("Applied brake.");
 	}
 
+	enum BrakeTypes {
+		HAND_BRAKE, LEG_BRAKE
+	}
+	
+	public void brake(BrakeTypes brake) {
+		if(brake.equals(BrakeTypes.HAND_BRAKE)) {
+			System.out.println("Hand brake applied.");
+		} else {
+			System.out.println("Leg brake applied.");
+		}
+		
+	}
 }
